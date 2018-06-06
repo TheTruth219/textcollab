@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Online Collaborative Text Editor</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="css\app.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__h1">Talk to Me</h1>
+    </header>
+    <div  class="doc">
+      <div class="doc__background-ribbon"></div>
+      <div id=doc class="doc__text-editor hidden"></div>
+    </div>
+
+    <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+    <script src="js\app.js"></script>
+    <script>
+  var pusher = new Pusher('aa24fae35885968d60d9', {
+    authTransport: 'jsonp',
+    authEndpoint: 'http://localhost:5000/pusher_jsonp_auth'
+  });
+</script>
+<script>
+  var channel = pusher.subscribe('private-my-channel');
+
+  channel.bind('greet', function(data) {
+    alert(data.greeting);
+  });
+</script>
+
+  </body>
+</html>

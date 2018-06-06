@@ -1,0 +1,25 @@
+{
+  "name": "textcollab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheTruth219/textcollab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheTruth219/textcollab/issues"
+  },
+  "homepage": "https://github.com/TheTruth219/textcollab#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "pusher": "^2.0.0"
+  }
+}
